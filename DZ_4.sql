@@ -45,7 +45,7 @@ VALUES(111119,'LADA', 'СИНИЙ', date'2017-01-01', 9213333331);
 SELECT 
 	MARK,
 	COLOR,
-    COUNT(1) AS "Количество машин каждого цвета для марок BMW и LADA"
+    	COUNT(1) AS "Количество машин каждого цвета для марок BMW и LADA"
 FROM AUTO
 WHERE MARK IN ("BMW", "LADA")
 GROUP BY MARK, COLOR;
@@ -55,7 +55,7 @@ GROUP BY MARK, COLOR;
 SELECT
 	COUNT(*) "Всего машин",
 	SUM(MARK = "BMW") "количество AUTO марки BMW",
-    SUM(MARK NOT IN("BMW")) AS "количество AUTO не этой марки"
+	SUM(MARK NOT IN("BMW")) AS "количество AUTO не этой марки"
 FROM AUTO;
 
 -- 3. Напишите запрос, который вернет строки из таблицы test_a, id которых нет в таблице test_b, НЕ используя ключевого слова NOT
